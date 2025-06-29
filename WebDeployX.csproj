@@ -9,6 +9,7 @@
 	<AssemblyVersion>1.0.1.0</AssemblyVersion>
     <FileVersion>1.0.1.0</FileVersion>
     <Version>1.0.1</Version>
+    <ApplicationIcon>WebDeployX.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -25,6 +26,10 @@
       <Isolated>false</Isolated>
       <EmbedInteropTypes>true</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="WebDeployX.ico" />
   </ItemGroup>
 
   <ItemGroup>
