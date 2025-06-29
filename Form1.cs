@@ -1,6 +1,8 @@
 using IWshRuntimeLibrary; // Add COM reference manually
 using System.Diagnostics;
 using System.IO.Compression;
+using System.Reflection;
+using System.IO;
 
 namespace XamppDeployer
 {
@@ -9,6 +11,17 @@ namespace XamppDeployer
         public Form1()
         {
             InitializeComponent();
+            var assembly = Assembly.GetExecutingAssembly();
+            using Stream iconStream = assembly.GetManifestResourceStream("WebDeployX.WebDeployX.ico");
+            if (iconStream != null)
+            {
+                this.Icon = new Icon(iconStream);
+            }
+            else
+            {
+                MessageBox.Show("Failed to load icon from embedded resources.");
+            }
+
         }
 
         private void btnDeploy_Click(object sender, EventArgs e)
